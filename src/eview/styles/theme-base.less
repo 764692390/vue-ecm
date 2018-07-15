@@ -1,0 +1,60 @@
+@import '~iview/src/styles/index';
+/* custom var */
+@green-color           : #87D068;
+
+/* Color */
+@dark-color            : #262a33;
+@title-color           : @dark-color;
+@gray-color            : #999;
+@dark-gray-color       : #666;
+@link-color            : @primary-color;
+@subsidiary-color      : #a8a9ad; // 黑底正常文字
+
+/* Base */
+@text-color             : #333;
+
+/* Border color */
+@border-color-base      : #ddd;
+@table-td-stripe-bg     : #fafafa;
+
+/* Background color */
+@background-color-base  : #f4f5f7;
+@menu-dark-active-bg    : transparent;
+@table-thead-bg         : rgba(0,0,0,.03);
+@table-td-hover-bg      : #fff6f1;
+@table-td-highlight-bg  : #fff6f1;
+@date-picker-cell-hover-bg    : #fff6f1;
+
+
+@primary-color          : #fc9153;
+@info-color             : #2db7f5;
+@success-color          : #44c644;
+@warning-color          : #ff9d00;
+@error-color            : #ff4133;
+
+/* Button */
+@btn-circle-size        : 28px;
+
+
+/* Input */
+@input-placeholder-color: #ccc;
+
+body{
+  color:@text-color;
+}
+
+/* radio */
+.@{radio-prefix-cls} {
+  &:hover {
+    .@{radio-inner-prefix-cls} {
+      border-color: @primary-color;
+    }
+  }
+}
+// .@{radio-prefix-cls}-disabled {
+//   &:hover {
+//     .@{radio-inner-prefix-cls} {
+//       border-color: @border-color-base;
+//     }
+//   }
+// }

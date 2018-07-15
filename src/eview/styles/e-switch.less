@@ -1,0 +1,14 @@
+.@{switch-prefix-cls} {
+  &:focus {
+    box-shadow: 0 0 0 2px fade(@green-color , 20%);
+  }
+   &-checked {
+    border-color: @green-color ;
+    background-color: @green-color ;
+  }
+  &-disabled {
+    &:after {
+      background: @gray-color;
+    }
+  }
+}

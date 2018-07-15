@@ -1,0 +1,66 @@
+.e-menu{
+  width:230px;
+  position:absolute;
+  top:120px;
+  bottom:36px;
+  overflow: auto;
+  .ivu-menu-item > i{
+    margin-right:8px;
+  }
+  .ivu-icon-android-apps{
+    font-size:15px;
+  }
+  .ivu-icon{
+    width:12px;
+    text-align:center;
+  }
+  .ivu-menu-vertical{
+    .ivu-menu-item{
+      border-right:0;
+      border-left:2px solid transparent;
+    }
+    .ivu-menu-submenu{
+      .ivu-menu-item{
+        padding-left:48px;
+      }
+    }
+  }
+  /* dark and light menu */
+  .ivu-menu-vertical{
+    &.ivu-menu-dark, &.ivu-menu-light{
+      .ivu-menu-item-active:not(.ivu-menu-submenu){
+        color: @primary-color;
+        border-right:0;
+        border-left:2px solid @primary-color;
+      }
+    }
+
+    &.ivu-menu-dark{
+      .ivu-menu-item{
+        &:hover, &.ivu-menu-item-active{
+          background: rgba(0, 0, 0, 0.1) !important;
+        }
+      }
+      .ivu-menu-submenu-title{
+        &:hover{
+          background: rgba(0, 0, 0, .1);
+        }
+      }
+    }
+
+    &.ivu-menu-light{
+      .ivu-menu-item-active:not(.ivu-menu-submenu){
+        box-shadow: inset 5px 0 5px -5px @primary-color;
+      }
+      &:after{
+        width:0;
+      }
+    }
+  }
+
+  .ivu-menu-item,
+  .ivu-menu-submenu-title{
+    padding-top:11px;
+    padding-bottom:11px;
+  }
+}

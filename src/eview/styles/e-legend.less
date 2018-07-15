@@ -1,0 +1,29 @@
+.e-legend{
+  margin-bottom:30px;
+  .e-legend-title{
+    font-size:16px;
+    display:flex;
+    color:@gray-color; 
+  }
+  .e-legend-line{
+    flex:1;
+    position:relative;
+    &.e-legend-line-left{
+      margin-right:16px;
+    }
+    &.e-legend-line-right{
+      margin-left:16px;
+    }
+    &:after{
+      content:'';
+      position:absolute;
+      top:50%;
+      width:100%;
+      height:0;
+      border-bottom:1px solid #ddd;
+    };
+  };
+  .e-legend-content{
+    margin-top:20px;
+  }
+}

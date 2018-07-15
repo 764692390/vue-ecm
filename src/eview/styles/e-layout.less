@@ -1,0 +1,122 @@
+html,body{
+  background-color: @background-color-base;
+}
+.e-layout{
+  height:100%;
+  // background: @background-color-base;
+  position: relative;
+  // display: flex;
+  &>.ivu-row-flex{
+    height:100%;
+  }
+  .e-layout-left{
+    background: @dark-color;
+    width:230px;
+    overflow:auto;
+    height:100%;
+    position:fixed;
+    transition:.5s ease all;
+    z-index: 11;
+  }
+  .e-layout-right{
+    // flex:1;
+    height:100%;
+    margin-left:230px;
+    transition:.5s ease margin;
+    // overflow: auto;
+  }
+  .e-layout-content{
+    min-height: 100%;
+    // position:relative;
+  }
+  .e-layout-content-main{
+    padding:70px 30px 50px;
+  }
+  .e-layout-copyright{
+    // position:absolute;
+    // bottom:0;
+    // width:100%;
+    text-align: center;
+    padding: 10px 0 20px;
+    color: @gray-color;
+  }
+  .e-layout-header{
+    position: fixed;
+    z-index:10;
+    top:0;
+    right:0;
+    width:100%;
+    background-color:@background-color-base;
+    height: 50px;
+    box-shadow: 0 1px 0 @border-color-base;
+    .header-right{
+      height:100%;
+      border-left:1px soid #999;
+      padding-left:20px;
+      float:right;
+     .ivu-dropdown{
+      margin-top:14px;
+      margin-right:20px;
+     }
+    }
+  }
+  .e-layout-logo{
+    font-size:22px;
+    height: 60px;
+    line-height: 60px;
+    margin: 30px 24px;
+    max-width: 80px;
+    transition:.2s ease all;
+    &,a{
+      color:#fff;
+    }
+  }
+  .e-layout-toggle{
+    position:absolute;
+    width:100%;
+    bottom:0;
+    left:0;
+    color:#ccc;
+    height:36px;
+    line-height:36px;
+    font-size:20px;
+    text-align:center;
+    cursor:pointer;
+    transition:.2s ease all;
+    background-color:darken(@dark-color, 3);
+    &:hover{
+      background-color:darken(@dark-color, 6);
+    }
+  }
+  &.e-layout-shrinked{
+    .e-layout-left{
+      width:60px;
+      overflow:hidden;
+      .e-layout-logo{
+        margin-left:10px;
+        margin-right:10px;
+        text-align:center;
+        img{
+          max-width:100%;
+        }
+      }
+      .e-menu-text{
+        display:none;
+      }
+      .ivu-menu-submenu-title-icon{
+        display:none;
+      }
+      .ivu-icon-ios-arrow-left{
+        transition:.2s ease all;
+        transform: rotateZ(180deg);
+      }
+      .ivu-menu-submenu-title{
+        transition:.2s ease all;
+        // padding-left:16px;
+      }
+    }
+    .e-layout-right{
+      margin-left: 60px;
+    }
+  }
+}
